@@ -1,0 +1,49 @@
+Stable Diffusion & Flux Model - Deliverables
+
+This project integrates Python (Stable Diffusion) and Julia (Flux ML) to generate images and preprocess them using AI models.
+
+
+File structure
+📁 StableDiffusion-Julia
+│── 📜 generate_image.py       # Python script for Stable Diffusion image generation
+│── 📜 preprocess_images.py    # Python script for image preprocessing
+│── 📜 flux_model.jl           # Julia script for Flux-based model demonstration
+│── 📜 Project.toml            # Julia dependencies
+│── 📜 README.md               # Documentation
+│── 📂 images/                 # Folder for generated images & preprocessed outputs
+│   ├── generated_1.png        
+│   ├── generated_2.png        
+│   ├── preprocessed_1.png     
+│   ├── preprocessed_2.png     
+└── 📂 notebooks/              # (Optional) Jupyter Notebooks for Python & Julia
+    ├── stable_diffusion.ipynb
+    ├── flux_model_demo.ipynb  
+
+
+This project implements Stable Diffusion for AI-based image generation using Python and integrates it with Flux.jl for model demonstration in Julia.
+	•	Python: Uses diffusers, torch, and transformers to generate and preprocess images.
+	•	Julia: Uses Flux.jl to demonstrate a basic neural network on generated images.
+
+
+Install Dependencies
+
+In Julia, install required packages:
+  using Pkg
+  Pkg.add(["Conda", "Flux"])
+  using Conda
+  Conda.add("python")   #to install Python inside Julia
+  Conda.add("pip")
+
+
+Run the Stable Diffusion Image Generator (Python):
+  python generate_image.py
+This generates images using the Stable Diffusion pipeline.
+
+
+Preprocess Generated Images (Python):
+  python preprocess_images.py
+This normalizes and converts images to grayscale.
+
+
+run the julia file:
+  julia flux_model.jl
